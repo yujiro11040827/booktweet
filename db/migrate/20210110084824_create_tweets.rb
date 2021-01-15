@@ -3,8 +3,8 @@ class CreateTweets < ActiveRecord::Migration[6.0]
     create_table :tweets do |t|
       t.string :name,         null: false
       t.string :author,       null: false
-      t.integer :category_id, null: false
-      t.string :impressions,  null: false
+      t.integer :genre_id,    null: false
+      t.text   :impressions,  null: false
       t.timestamps
     end
   end
