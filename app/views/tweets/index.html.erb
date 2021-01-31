@@ -2,30 +2,20 @@
   <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
-<div class="contents row">
+
+<div class='lists'>
   <% @tweets.each do |tweet| %>
-     <%= image_tag tweet.image, class: 'content_post' if tweet.image.attached? %>
-    <div class="more">
-      <ul class="more_list">
-          <li>
-            <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
-          </li>
-            <% if user_signed_in? && current_user.id == tweet.user_id %>
-          <li>
-            <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
-          </li>
-           <% end %>
-        </ul>
-      </div>
-      <p><%= tweet.impressions %></p>
-      <span class="name">
-          <a href="/users/<%= tweet.user.id %>">
-          <span>投稿者</span><%= tweet.user.nickname %>
-        </a>
-      </span>
-    </div>
+  <div class='list'>
+     <%= link_to tweet_path(tweet.id) do %>
+     <% if tweet.image.present?%>
+     <%= image_tag tweet.image.variant(resize: '210x210'), class: 'image' %>
+     <% else %>
+     <%= image_tag 'cropbookGFVL4222.jpg', class: 'image' %>
+     <% end %>
+      <p class='tweet-name'>
+      <%= tweet.name %>
+      </p>
+   <% end %>
+   </div>
   <% end %>
-</div>
+  </div>
