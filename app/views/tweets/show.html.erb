@@ -1,30 +1,41 @@
-<div class="contents row">
-  <div class="content_post">
-   <% if user_signed_in? && current_user.id == @tweet.user_id %>
-    <div class="more">
-      <span><%= image_tag 'arrow_top.png' %></span>
-      <ul class="more_list">
-        <li>
-          <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
-        </li>
-        <li>
-          <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
-        </li>
+ <div class='show-list'>
+    <div class='show-content'>
+     <% if @tweet.image.present?%>
+     <%= image_tag @tweet.image, :size => '400x300' %>
+     <% else %>
+     <%= image_tag 'cropbookGFVL4222.jpg',:size => '400x300'  %>
+     <% end %>
+      <ul>
+      <%= @tweet.name %>
       </ul>
-    </div>
-    <% end %>
-    <p><%= @tweet.impressions %></p>
-    <span class="name">
-      <a href="/users/<%= @tweet.user.id %>">
-        <span>投稿者</span><%= @tweet.user.nickname %>
-      </a>
-    </span>
+      <ul>
+      <%= @tweet.author %>
+      </ul>
+      <ul>
+      <%= @tweet.genre.name %>
+      </ul>
+      <ul>
+      <%= @tweet.impressions %>
+      </ul>
+      </div>
+      <div class='edit-delete'>
+       <% if user_signed_in? && current_user.id == @tweet.user_id %>
+        <ul>
+          <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
+        </ul>
+        <ul>
+           <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
+        </ul>
+       <% end %>
+       </div>
   </div>
-  <div class="container">
+
+   <div class='comment'>
     <% if user_signed_in? %>
+    <div class="edit-content">
       <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "box" %>
+        <%= form.submit "SEND", class: "send" %>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>

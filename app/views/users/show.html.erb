@@ -1,8 +1,17 @@
-<div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
+<h3 class='edit-form'><%= @nickname %>さんの投稿一覧</h3>
+<div class="lists">
   <% @tweets.each do |tweet| %>
-    <div class="content_post">
-      <p><%= tweet.impressions %></p>
-    </div>
+    <div class='list'>
+     <%= link_to tweet_path(tweet.id) do %>
+     <% if tweet.image.present?%>
+     <%= image_tag tweet.image, class: 'image'%>
+     <% else %>
+     <%= image_tag 'cropbookGFVL4222.jpg', class: 'image' %>
+     <% end %>
+      <p class='tweet-name'>
+      <%= tweet.name %>
+      </p>
+   <% end %>
+   </div>
   <% end %>
 </div>

@@ -91,3 +91,63 @@ a {
   text-align: center;
   color: black;
 }
+
+.edit-list{
+  background-color: #dbedf0;
+}
+
+.edit-form{
+  text-align: center;
+}
+
+.edit-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box{
+  width: 500px;
+  height: 50px;
+}
+
+.box2{
+  width: 500px;
+  height: 100px;
+}
+
+.genre-select{
+  height: 50px;
+  width: 300px;
+}
+
+.send{
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: #38AEF0;
+  color:white;
+  display: block;
+}
+
+.show-list{
+  background-color: #dbedf0;
+}
+
+.show-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.edit-delete{
+  display: flex;
+  justify-content: center;
+}
+
+.comment{
+  margin-top: 50px;
+}

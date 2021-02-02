@@ -8,7 +8,7 @@
   <div class='list'>
      <%= link_to tweet_path(tweet.id) do %>
      <% if tweet.image.present?%>
-     <%= image_tag tweet.image.variant(resize: '210x210'), class: 'image' %>
+     <%= image_tag tweet.image, class: 'image'%>
      <% else %>
      <%= image_tag 'cropbookGFVL4222.jpg', class: 'image' %>
      <% end %>
