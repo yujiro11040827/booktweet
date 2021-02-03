@@ -1,12 +1,13 @@
 <h3 class='edit-form'><%= @nickname %>さんの投稿一覧</h3>
-<div class="lists">
+
+<div class='user-show'>
   <% @tweets.each do |tweet| %>
-    <div class='list'>
+  <div class='user-shows'>
      <%= link_to tweet_path(tweet.id) do %>
      <% if tweet.image.present?%>
-     <%= image_tag tweet.image, class: 'image'%>
+     <%= image_tag tweet.image, :size => '297x200'%>
      <% else %>
-     <%= image_tag 'cropbookGFVL4222.jpg', class: 'image' %>
+     <%= image_tag 'cropbookGFVL4222.jpg', :size => '297x200' %>
      <% end %>
       <p class='tweet-name'>
       <%= tweet.name %>
