@@ -70,7 +70,7 @@ a {
 .lists{
   display: grid;
   gap: 26px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   margin-top: 6%;
   margin-bottom: 50px;
   margin-right: 10px;
@@ -81,7 +81,13 @@ a {
   border: 1px solid black;
 }
 
-.image{
+
+.image1{
+  display: flex;
+  justify-content: center;
+}
+
+.image2{
   max-width: 100%;
   top: 50%;
   left: 50%;
@@ -146,8 +152,28 @@ a {
 .edit-delete{
   display: flex;
   justify-content: center;
+  color: blue;
 }
 
 .comment{
   margin-top: 50px;
+  text-align: center;
+}
+
+.nickname{
+  color: red;
+}
+
+.contents-row{}
+
+.success{}
+
+footer {
+  margin: 30px auto;
+  padding: 10px;
+  color: #D8D8D8;
+}
+
+footer p {
+  text-align: center;
 }

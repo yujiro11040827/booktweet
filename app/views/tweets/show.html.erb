@@ -1,20 +1,24 @@
  <div class='show-list'>
     <div class='show-content'>
      <% if @tweet.image.present?%>
-     <%= image_tag @tweet.image, :size => '400x300' %>
+     <%= image_tag @tweet.image, :size => '400x300', class: 'image1' %>
      <% else %>
      <%= image_tag 'cropbookGFVL4222.jpg',:size => '400x300'  %>
      <% end %>
       <ul>
+      本の題名:
       <%= @tweet.name %>
       </ul>
       <ul>
+      著者：
       <%= @tweet.author %>
       </ul>
       <ul>
+      ジャンル：
       <%= @tweet.genre.name %>
       </ul>
       <ul>
+      感想：
       <%= @tweet.impressions %>
       </ul>
       </div>
@@ -44,7 +48,7 @@
       <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment| %>
         <p>
-          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: "nickname" %>：</strong>
           <%= comment.text %>
         </p>
       <% end %>
