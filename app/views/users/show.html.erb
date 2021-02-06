@@ -1,6 +1,6 @@
+<div class='contents-row'>
 <h3 class='edit-form'><%= @nickname %>さんの投稿一覧</h3>
-
-<div class='user-show'>
+ <div class='user-show'>
   <% @tweets.each do |tweet| %>
   <div class='user-shows'>
      <%= link_to tweet_path(tweet.id) do %>
@@ -12,7 +12,8 @@
       <p class='tweet-name'>
       <%= tweet.name %>
       </p>
-   <% end %>
+     <% end %>
    </div>
   <% end %>
+ </div>
 </div>

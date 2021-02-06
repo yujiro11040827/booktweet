@@ -3,10 +3,10 @@
      <% if @tweet.image.present?%>
      <%= image_tag @tweet.image, :size => '400x300', class: 'image1' %>
      <% else %>
-     <%= image_tag 'cropbookGFVL4222.jpg',:size => '400x300'  %>
+     <%= image_tag 'cropbookGFVL4222.jpg',:size => '400x300', class: 'image1'  %>
      <% end %>
       <ul>
-      本の題名:
+      題名:
       <%= @tweet.name %>
       </ul>
       <ul>
@@ -34,7 +34,7 @@
        </div>
   </div>
 
-   <div class='comment'>
+  <div class='comment'>
     <% if user_signed_in? %>
     <div class="edit-content">
       <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
