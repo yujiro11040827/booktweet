@@ -1,13 +1,25 @@
-<div class="contents row">
-  <div class="container">
-    <h3>投稿する</h3>
+<div class="edit-list">
+    <h3 class='edit-form'>投稿する</h3>
     <%= form_with(model: @tweet, local: true) do |form| %>
-      <%= form.text_field :name, placeholder: "本の題名" %>
-      <%= form.text_field :author, placeholder: "著者" %>
-      <%= form.collection_select :genre_id, Genre.all, :id, :name, {}%>
-      <%= form.text_area :impressions, placeholder: "感想", rows: "10" %>
+     <div class='edit-content'>
+     <ul>
+      <%= form.text_field :name, placeholder: "本の題名", class: 'box' %>
+      </ul>
+      <ul>
+      <%= form.text_field :author, placeholder: "著者", class: 'box' %>
+      </ul>
+      <ul>
+      <%= form.collection_select :genre_id, Genre.all, :id, :name, {}, {class: "genre-select"}%>
+      </ul>
+      <ul>
+      <%= form.text_area :impressions, placeholder: "感想", rows: "10", class: "box2" %>
+      </ul>
+      <ul>
       <%= form.file_field :image %>
-      <%= form.submit "SEND" %>
+      </ul>
+      <ul>
+      <%= form.submit "SEND", class: "send" %>
+      </ul>
+      </div>
     <% end %>
-  </div>
 </div>
