@@ -136,6 +136,11 @@ a {
   height: 100px;
 }
 
+.box3{
+  width: 300px;
+  height: 25px;
+}
+
 .genre-select{
   height: 50px;
   width: 300px;
@@ -207,3 +212,39 @@ footer p {
 .search-list{
   border: 1px solid black;
 }
+
+.field{
+  width: 100px;
+}
+
+.remember{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.update{
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: #38AEF0;
+  color:white;
+  display: block;
+}
+
+.account-delete{
+  width: 200px;
+  margin-left: 40px;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: red;
+  color:white;
+  display: block;
+}
+
+.user-edit{
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+

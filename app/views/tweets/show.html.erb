@@ -5,8 +5,14 @@
      <% else %>
      <%= image_tag 'cropbookGFVL4222.jpg',:size => '400x300', class: 'image1'  %>
      <% end %>
+     <% unless user_signed_in? && current_user.id == @tweet.user_id %>
+        <ul>
+        投稿者：
+          <%= @tweet.user.nickname %>
+        </ul>
+      <% end %>
       <ul>
-      題名:
+      題名：
       <%= @tweet.name %>
       </ul>
       <ul>
