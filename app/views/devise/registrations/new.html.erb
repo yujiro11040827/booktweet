@@ -1,35 +1,35 @@
-<div class="contents row">
-  <div class="container">
-    <h2>Sign up</h2>
+<div class='edit-list'>
+    <h2 class='edit-form'>Sign up</h2>
+     <div class='edit-content'>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= devise_error_messages! %>
 
-      <div class="field">
+      <ul>
         <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
-        <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
-      </div>
+        <%= f.text_field :nickname, autofocus: true, maxlength: "6", class: 'box3' %>
+      </ul>
 
-      <div class="field">
+      <ul>
         <%= f.label :email %><br />
-        <%= f.email_field :email %>
-      </div>
+        <%= f.email_field :email, class: 'box3' %>
+      </ul>
 
-      <div class="field">
+      <ul>
         <%= f.label :password %>
         <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
+        <%= f.password_field :password, autocomplete: "off", class: 'box3' %>
+      </ul>
 
-      <div class="field">
+      <ul>
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'box3' %>
+      </ul>
 
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
+      <ul>
+        <%= f.submit "作成", class: "send" %>
+      </ul>
     <% end %>
-  </div>
+    </div>
 </div>
