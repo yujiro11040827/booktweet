@@ -1,20 +1,17 @@
+
 class LikesController < ApplicationController
-
-  before_action :prepare_tweet
-
+ 
   def create
-    @like = current.user.likes.new(tweet_id: @tweet.id)
+    @like = Like.new(user_id: current_user.id, tweet_id: params[:tweet_id])
     @like.save
-    @likes = Like.where(tweet_id: @tweet.id)
+    redirect_to root_path
   end
-
+  
   def destroy
-    @like = Like.find_by(tweet_id: @tweet.id, user_id: current_user.id).destroy
-    @likes = Like.where(tweet_id: @tweet.id)
-  end
+    @like = Like.find_by(user_id: current_user.id, tweet_id: params[:tweet_id])
+    @like.destroy
+    redirect_to root_path
+   end
 
-  private
-  def prepare_tweet
-    @tweet = Tweet.find(params[:tweet_id])
-  end
-end
+ end
+ 
