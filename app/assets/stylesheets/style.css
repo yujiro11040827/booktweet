@@ -109,6 +109,7 @@ a {
   color: black;
 }
 
+
 .edit-list{
   background-color: #dbedf0;
 }
@@ -248,3 +249,7 @@ footer p {
   padding-top: 15px;
 }
 
+.like{
+  display: flex;
+  justify-content: center;
+}
