@@ -1,3 +1,4 @@
+<img width="1205" alt="スクリーンショット 2021-03-05 17 30 55" src="https://user-images.githubusercontent.com/71250516/110088774-a2a40c00-7dd8-11eb-9d81-804096247a1c.png">
 # テーブル設計
 
 # usersテーブル
@@ -61,7 +62,7 @@
    トップページ
    https://gyazo.com/405e1f6c4f8c9c95f59ab7c5c26743d2
    マイページ(ツイート詳細へ移動できる)
-   https://gyazo.com/90b6d37836283694f9b5813c630648f0
+   <img width="1205" alt="スクリーンショット 2021-03-05 17 30 55" src="https://user-images.githubusercontent.com/71250516/110088863-bf404400-7dd8-11eb-8a8e-8f4149e4c7b7.png">
    ツイート投稿機能（ツイートを送信できる)
    ツイート詳細画面（ツイートの詳細、コメントを見ることできる）
    ツイート編集画面（投稿したツイートを編集できる）
@@ -80,3 +81,4 @@
 
  # ローカルでの動作方法　
    bundle installを実行し、gemのインストール、rails db:migrate、最後にrails s
+<img width="1205" alt="スクリーンショット 2021-03-05 17 30 55" src="https://user-images.githubusercontent.com/71250516/110088863-bf404400-7dd8-11eb-8a8e-8f4149e4c7b7.png">
