@@ -38,7 +38,7 @@
         </ul>
         <% else %>
          <ul>
-        <% if Like.find_by(user_id: current_user.id, tweet_id: @tweet.id) %>
+        <% if Like.find_by(user: current_user, tweet_id: @tweet.id) %>
         <%= link_to '❤️', tweet_like_path(@tweet.id), method: :delete %>
         <% else %>
         <%= link_to '♡', tweet_likes_path(@tweet.id), method: :post %>
