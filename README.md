@@ -58,7 +58,7 @@
 
  # 実装した機能　
    トップページ(自分の投稿したツイートには♡はありません。いいねした場合は❤️になります)
-   https://user-images.githubusercontent.com/71250516/111070464-39797280-8515-11eb-86fc-6ff267aed91c.mov
+   <img width="1171" alt="スクリーンショット 2021-03-14 22 34 19" src="https://user-images.githubusercontent.com/71250516/111070521-780f2d00-8515-11eb-856b-98ea9169b393.png">
 
    マイページ(ユーザーのツイートを一覧表示でき、ツイート詳細へ移動できます)
    <img width="1205" alt="スクリーンショット 2021-03-05 17 30 55" src="https://user-images.githubusercontent.com/71250516/110088863-bf404400-7dd8-11eb-8a8e-8f4149e4c7b7.png">
