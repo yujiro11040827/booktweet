@@ -20,7 +20,8 @@ a {
 }
 
 .title{
-  
+  text-shadow: 1px 1px 2px silver;
+  font-family: 'Akaya Telivigala', cursive;
 }
 
 .heading a{
@@ -39,6 +40,7 @@ a {
 
 .nav-lists a{
   color: #5b5846;
+  text-shadow: 1px 1px 2px silver;
 }
 
 
@@ -93,7 +95,7 @@ a {
 
 .image1{
   text-align: center;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 
 .image2{

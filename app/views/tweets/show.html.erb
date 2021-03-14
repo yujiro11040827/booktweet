@@ -34,11 +34,11 @@
           <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
         </ul>
         <ul>
-           <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
+          <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
         </ul>
         <% else %>
          <ul>
-        <% if Like.find_by(user_id: current_user.id, tweet_id: @tweet.id) %>
+        <% if Like.find_by(user: current_user, tweet_id: @tweet.id) %>
         <%= link_to '❤️', tweet_like_path(@tweet.id), method: :delete %>
         <% else %>
         <%= link_to '♡', tweet_likes_path(@tweet.id), method: :post %>
